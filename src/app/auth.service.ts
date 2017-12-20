@@ -20,7 +20,7 @@ export class AuthService {
    }
 
   login() {
-    let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
+    let returnUrl = (this.route.snapshot.queryParamMap.get('returnUrl') || '/');
     localStorage.setItem('returnUrl', returnUrl);
 
     this.afAuth.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
@@ -33,7 +33,9 @@ export class AuthService {
   get appUser$(): Observable<AppUser> {
     return this.user$
     .switchMap(user => {
-      if (user) return this.userService.get(user.uid);
+      if (user) {
+        return this.userService.get(user.uid);
+      }
 
       return Observable.of(null);
     });
