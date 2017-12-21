@@ -26,7 +26,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
 
    private initializeTable(products: Product[]) {
     this.tableResource = new DataTableResource(products);
-     
+
     this.tableResource.query({ offset: 0 })
     .then(items => this.items = items);
     this.tableResource.count()
@@ -46,7 +46,6 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
       this.products;
 
       this.initializeTable(filteredProducts);
-   
    }
 
   ngOnInit() {
