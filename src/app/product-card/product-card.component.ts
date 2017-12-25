@@ -1,5 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../models/product';
+import { ShoppingCart } from './../models/shopping-cart';
+import {
+  Component,
+  OnInit,
+  Input
+} from '@angular/core';
+import {
+  Product
+} from '../models/product';
+import {
+  ShoppingCartService
+} from '../shopping-cart.service';
 
 @Component({
   selector: 'product-card',
@@ -8,9 +18,15 @@ import { Product } from '../models/product';
 })
 export class ProductCardComponent {
   @Input('product') product: Product;
+  // tslint:disable-next-line:no-input-rename
   @Input('show-actions') showActions = true;
+  @Input('shopping-cart') shoppingCart: ShoppingCart;
 
-  constructor() { }
 
+  constructor(private cartService: ShoppingCartService) {
+  }
 
+  addToCart() {
+    this.cartService.addToCart(this.product);
+  }
 }
