@@ -2,3 +2,7 @@
 .dropdown-toggle {
   cursor: pointer;
 }
+
+ul.navbar-nav {
+  margin-left: 5px;
+}
