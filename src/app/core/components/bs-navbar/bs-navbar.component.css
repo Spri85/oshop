@@ -4,5 +4,9 @@
 }
 
 ul.navbar-nav {
-  margin-left: 5px;
+  margin-left: 15px;
+}
+
+.fa-leaf {
+  font-size: 25px;
 }
