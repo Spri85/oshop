@@ -1,6 +1,12 @@
 # [Oshop](https://oshop-d7cf5.firebaseapp.com)
+#####This app has user and admin interface.
+If you want to log in as an administrator or you have some ideas to improve this project pls contact me.
+My skype: spri85
 
+![Main interface](./src/assets/img/oshop1.jpg)
+![Manage Products](./src/assets/img/oshop2.jpg)
 
+`---------------------------------------------------------------------`
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
 
 ## Development server
